@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Anastasia Kiseleva](https://up.htmlacademy.ru/htmlcss/33/user/1709931).
-* Наставник: Денис Байдаров.
+* Наставник: [Денис Байдаров](https://htmlacademy.ru/profile/4er).
 
 ---
 
