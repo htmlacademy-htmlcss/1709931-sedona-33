@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -36,13 +37,14 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="button" href="#">Хочу сюда!</a>
+            <a class="button navigation-button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="main-inner">
+      <div class="filter-container">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -138,6 +140,7 @@
           <button class="button reset-button" type="reset">Сбросить</button>
         </form>
       </section>
+      </div>
 
       <section class="sorting">
         <h2 class="sorting-title">Найдено гостиниц: 38</h2>
@@ -171,7 +174,9 @@
               <span class="hotel-card-price">От 4000 ₽</span>
               <a class="button button-hotel-details" href="#">Подробнее</a>
               <a class="button button-hotel-favorites" href="#">В избранное</a>
-              <img class="hotel-card-stars" src="" alt="4 звезды.">
+              <div class="hotel-card-stars hotel-card-stars-4">
+                <span class="visually-hidden">4 звезды</span>
+              </div>
               <span class="hotel-card-rating">Рейтинг: 8,5</span>
             </article>
           </li>
@@ -188,7 +193,9 @@
               <span class="hotel-card-price">От 3000 ₽</span>
               <a class="button button-hotel-details" href="#">Подробнее</a>
               <a class="button button-hotel-favorites" href="#">В избранное</a>
-              <img class="hotel-card-stars" src="" alt="3 звезды.">
+              <div class="hotel-card-stars hotel-card-stars-3">
+                <span class="visually-hidden">3 звезды</span>
+              </div>
               <span class="hotel-card-rating">Рейтинг: 8,9</span>
             </article>
           </li>
@@ -205,7 +212,9 @@
               <span class="hotel-card-price">От 2000 ₽</span>
               <a class="button button-hotel-details" href="#">Подробнее</a>
               <a class="button button-hotel-favorites button-hotel-favorites-added" href="#">В избранном</a>
-              <img class="hotel-card-stars" src="" alt="2 звезды.">
+              <div class="hotel-card-stars hotel-card-stars-2">
+                <span class="visually-hidden">2 звезды</span>
+              </div>
               <span class="hotel-card-rating">Рейтинг: 9,2</span>
             </article>
           </li>
@@ -222,7 +231,9 @@
               <span class="hotel-card-price">От 3000 ₽</span>
               <a class="button button-hotel-details" href="#">Подробнее</a>
               <a class="button button-hotel-favorites" href="#">В избранное</a>
-              <img class="hotel-card-stars" src="" alt="2 звезды.">
+              <div class="hotel-card-stars hotel-card-stars-2">
+                <span class="visually-hidden">2 звезды</span>
+              </div>
               <span class="hotel-card-rating">Рейтинг: 9,2</span>
             </article>
           </li>
@@ -302,7 +313,7 @@
       <section class="footer-htmlacademy">
         <h2 class="visually-hidden">htmlacademy</h2>
         <a class="footer-htmlacademy-link" href="https://htmlacademy.ru/">
-          <img class="footer-htmlacademy-logo" src="" alt="Логотип HTML Академии.">
+          <img class="footer-htmlacademy-logo" src="images/footer/html-academy.svg" width="115" height="34" alt="Логотип HTML Академии.">
         </a>
       </section>
     </footer>
