@@ -70,9 +70,9 @@ html {
 }
 
 .button:focus {
-  box-shadow: inset 0 0 0 3px #83B3D3;
-  outline: none;
+  outline: 3px solid #83B3D3;
   background-color: #615048;
+  outline-offset: 0;
 }
 
 .button:active {
@@ -445,8 +445,23 @@ html {
   width: 600px;
   padding: 0;
   padding-left: 22px;
+  background-color: #F2F2F2;
   border: none;
   border-radius: 10px 0px 0px 10px;
+}
+
+.subscribe-field:hover {
+  background-color: #E6E6E6;
+}
+
+.subscribe-field:focus {
+  outline: 3px solid #83B3D3;
+  background-color: #E6E6E6;
+}
+
+.subscribe-field:invalid {
+  border: 2px solid #FF5757;
+  outline: none;
 }
 
 .subscribe-button {
@@ -464,7 +479,7 @@ html {
 }
 
 .subscribe-button:focus {
-  box-shadow: inset 0 0 0 3px #756257;
+  outline: 3px solid #756257;
   background-color: #68A2CA;
 }
 
@@ -505,14 +520,6 @@ html {
   margin-right: 0;
 }
 
-.footer-social-icon {
-  fill: #83B3D3;
-}
-
-.footer-social-icon:hover {
-  fill: #68A2CA;
-}
-
 .footer-social-link {
   padding: 7px 11px;
 }
@@ -527,11 +534,20 @@ html {
   border-radius: 10px;
 }
 
+.footer-social-icon {
+  fill: #83B3D3;
+}
+
+.footer-social-icon:hover {
+  fill: #68A2CA;
+}
+
 .footer-social-icon:active {
   fill: rgba(104, 162, 202, 0.3);
 }
 
 .footer-contacts-phone {
+  padding: 10px 15px;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
@@ -557,14 +573,12 @@ html {
 }
 
 .footer-contacts-phone:focus {
-  padding: 10px 15px;
   color: #756257;
   outline: 3px solid #83B3D3;
   border-radius: 10px;
 }
 
 .footer-htmlacademy-link:focus {
-
   color: #756257;
   outline: 3px solid #83B3D3;
   border-radius: 10px;
@@ -592,11 +606,41 @@ html {
 }
 
 .breadcrumbs-link {
-  margin-right: 26px;
+  position: relative;
+  display: block;
+  margin-left: 20px;
+  padding: 0px 5px;
   font-size: 16px;
   line-height: 21px;
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.breadcrumbs-link-main {
+  margin-left: -4px;
+}
+
+.breadcrumbs-icon {
+  position: absolute;
+  top: 8px;
+  left: 28px;
+  bottom: 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus {
+  color: #FFFFFF;
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .filter-container {
@@ -630,15 +674,54 @@ html {
 }
 
 .filter-button {
+  display: block;
+  width: 160px;
+  height: 48px;
+  font-family: inherit;
   line-height: 21px;
   background-color: #83B3D3;
 }
 
+.filter-button:hover {
+  background-color: #68A2CA;
+}
+
+.filter-button:focus {
+  outline: 3px solid #FFFFFF;
+  border-radius: 4px;
+  background-color: #68A2CA;
+}
+
+.filter-button:active {
+  color:rgba(255, 255, 255, 0.3);
+  background-color: #68A2CA;
+}
+
 .reset-button {
+  width: 94px;
+  margin-top: 20px;
+  margin-left: 34px;
+  font-family: inherit;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
   text-transform: none;
+  background-color: transparent;
+}
+
+.reset-button:hover {
+  color:rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+}
+
+.reset-button:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.reset-button:active {
+  color:rgba(255, 255, 255, 0.3);
   background-color: transparent;
 }
 
@@ -664,18 +747,77 @@ html {
 }
 
 .select-control-sorting {
+  width: 287px;
   margin-left: auto;
   margin-right: 80px;
+  padding-left: 20px;
+  font-family: inherit;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.select-control-sorting:hover {
+  border: 2px solid #83B3D3;
+}
+
+.select-control-sorting:focus {
+  border: 2px solid #83B3D3;
+  outline: none;
+}
+
+.select-control-sorting:active {
+  color: rgba(51, 51, 51, 0.3);
+  border: 2px solid #E6E6E6;
 }
 
 .sorting-button {
   width: 48px;
   height: 48px;
-  outline: 1px solid #600;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 .sorting-button:not(:last-child) {
   margin-right: 8px;
+}
+
+.sorting-button-active {
+  background-image: url("../images/catalog/mode-cards.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 2px solid #000000;
+}
+
+.sorting-button-slideshow {
+  background-image: url("../images/catalog/mode-slideshow.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.sorting-button-list {
+  background-image: url("../images/catalog/mode-list.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.sorting-button-active:hover,
+.sorting-button-slideshow:hover,
+.sorting-button-list:hover {
+  border: 2px solid #83B3D3;
+}
+
+.sorting-button-active:focus,
+.sorting-button-slideshow:focus,
+.sorting-button-list:focus {
+  border: 2px solid #83B3D3;
+  outline: none;
+}
+
+.sorting-button-active:active,
+.sorting-button-slideshow:active,
+.sorting-button-list:active {
+  border: 2px solid #000000;
 }
 
 /* Catalog cards*/
@@ -709,18 +851,37 @@ html {
   row-gap: 16px;
 }
 
-.hotel-card-link {
+.hotel-card-link-image {
   grid-area: image;
   text-decoration: none;
 }
 
+.hotel-card-link-image:hover {
+  opacity: 0.6;
+}
+
+.hotel-card-link-image:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: 0;
+}
+
+.hotel-card-link-image:active {
+  opacity: 0.3;
+}
+
 .hotel-card-image {
   display: block;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
-.hotel-card-title {
+.hotel-card-link-title {
   grid-area: title;
+  text-decoration: none;
+}
+
+.hotel-card-title {
   margin: 0;
   font-size: 24px;
   line-height: 31px;
@@ -751,6 +912,20 @@ html {
   line-height: 21px;
 }
 
+.button-hotel-details:hover {
+  background-color: #615048;
+}
+
+.button-hotel-details:focus {
+  outline: 3px solid #83B3D3;
+  background-color: #615048;
+}
+
+.button-hotel-details:active {
+  color:rgba(255, 255, 255, 0.3);
+  background-color: #615048;
+}
+
 .button-hotel-favorites {
   grid-area: favorites;
   justify-self: end;
@@ -763,8 +938,36 @@ html {
   background-color: #83B3D3;
 }
 
+.button-hotel-favorites:hover {
+  background-color: #68A2CA;
+}
+
+.button-hotel-favorites:focus {
+  outline: 3px solid #756257;
+  background-color: #68A2CA;
+}
+
+.button-hotel-favorites:active {
+  color:rgba(255, 255, 255, 0.3);
+  background-color: #68A2CA;
+}
+
 .button-hotel-favorites-added {
   background-color: #7DB54F;
+}
+
+.button-hotel-favorites-added:hover {
+  background-color: #6C9E42;
+}
+
+.button-hotel-favorites-added:focus {
+  outline: 3px solid #756257;
+  background-color: #6C9E42;
+}
+
+.button-hotel-favorites-added:active {
+  color:rgba(255, 255, 255, 0.3);
+  background-color: #6C9E42;
 }
 
 .hotel-card-stars {
@@ -817,18 +1020,29 @@ html {
 .pagination-button-containter {
   display: flex;
   justify-content: center;
+  margin-top: 34px;
+  margin-bottom: 30px;
+  padding: 30px 0px;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
 }
 
 .pagination-show-more {
   display: block;
   width: 620px;
   height: 60px;
-  margin-top: 64px;
-  margin-bottom: 60px;
   font-family: inherit;
   font-size: 20px;
   line-height: 26px;
   background-color: #83B3D3;
+}
+
+.pagination-show-more:hover,
+.pagination-show-more:focus,
+.pagination-show-more:active {
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  outline: none;
 }
 
 .pagination-container {
@@ -858,9 +1072,30 @@ html {
   text-align: center;
   text-decoration: none;
   background-color: #83B3D3;
+  border-radius: 4px;
+}
+
+.pagination-link:hover {
+  background-color: #68A2CA;
+}
+
+.pagination-link:focus {
+  outline: 3px solid #756257;
+  background-color: #68A2CA;
+  outline-offset: 0;
+}
+
+.pagination-link:active {
+  color:rgba(255, 255, 255, 0.3);
+  background-color: #68A2CA;
 }
 
 .pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.pagination-current:hover {
   color: #000000;
   background-color: #F2F2F2;
 }
@@ -870,6 +1105,15 @@ html {
   margin-right: 51px;
   font-size: 18px;
   line-height: 23px;
+}
+
+.select-control-hotel {
+  width: 160px;
+  height: 48px;
+  padding-left: 17px;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 /* Subscribe catalog */
