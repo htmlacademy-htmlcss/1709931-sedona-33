@@ -175,5 +175,78 @@
           </a>
         </section>
     </footer>
+
+    <div class="modal-container">
+      <div class="modal modal-booking">
+        <button class="modal-close-button" type="button">
+          <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z"/>
+          </svg>
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+
+          <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="booking-field-group">
+              <input class="booking-field" type="text" id="arrival" name="arrival-date" value="27 апреля 2020" placeholder="Укажите дату">
+              <label for="arrival" class="booking-label">Дата заезда:</label>
+              <span class="booking-description booking-description-invalid">Мы не можем отправить вас в прошлое.</span>
+            </p>
+
+            <p class="booking-field-group">
+              <input class="booking-field" type="text" id="departure" name="departure-date" value="1 сентября 2021" placeholder="Укажите дату">
+              <label for="departure" class="booking-label">Дата выезда:</label>
+              <span class="booking-description">На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+
+
+            <p class="booking-field-group-person">
+
+              <input class="booking-field booking-field-adults" type="number" id="adults" name="adults" value="2" min="0">
+              <label for="adults" class="booking-label booking-label-adults">Взрослые:
+                <button class="minus" type="button">
+                  <svg class="minus-icon" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0v1h13V0H0Z"/>
+                  </svg>
+                </button>
+
+                <button class="plus" type="button">
+                  <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+                  </svg>
+                </button>
+              </label>
+
+              <input class="booking-field booking-field-children" type="number" id="children" name="children" value="1" min="0">
+              <label for="children" class="booking-label booking-label-children">Дети:
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                    <svg class="tooltip-icon" width="25" height="25" viewBox="0 0 25 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><circle cx="12.5" cy="12.5" r="12.5"/><g clip-path="url(#a)" fill="#fff"><path d="M12 17h1v-6h-1v6ZM13 8h-1v1h1V8Z"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(12 8)" d="M0 0h1v9H0z"/></clipPath></defs>
+                    </svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+
+                <button class="minus" type="button">
+                  <svg aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0v1h13V0H0Z"/>
+                  </svg>
+                </button>
+
+                <button class="plus" type="button">
+                  <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+                  </svg>
+                </button>
+              </label>
+            </p>
+
+            <a class="button button-search" href="#">Найти</a>
+          </form>
+        </section>
+      </div>
+    </div>
+
   </body>
 </html>
