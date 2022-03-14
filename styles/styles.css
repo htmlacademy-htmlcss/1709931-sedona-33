@@ -743,6 +743,7 @@ html {
   border-radius: 4px;
   appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: textfield;
   cursor: pointer;
 }
 
@@ -935,9 +936,8 @@ html {
 /* Modal button  for searching */
 
 .button-search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  width: 100%;
   padding: 10px;
   font-size: 20px;
   line-height: 40px;
@@ -1337,6 +1337,7 @@ html {
   font-size: 18px;
   line-height: 23px;
   color: #333333;
+  background-color: #FFFFFF;
 }
 
 .select-control-sorting {
